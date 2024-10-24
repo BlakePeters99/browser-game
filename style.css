@@ -39,7 +39,7 @@ h1 {
     font-weight: bold;
 }
 
-#plot {
+#plot, #reaction {
     font-family: "Modern Antiqua";
     font-size: 30px;
     text-align: center;
@@ -49,6 +49,9 @@ h1 {
     background-color: lightyellow;
     padding: 10px;
     border-radius: 20px;
+}
+#HUD  {
+    background-color: lightyellow;
 }
 
 body{
