@@ -1,5 +1,56 @@
-button {
-    background-color: green;
-    width: 100px;
-    height: 100px;
+/* CSS */
+#buttons-box{
+    display: flex;
+    justify-content: center;
+}
+.btn {
+  align-items: center;
+  background-image: linear-gradient(144deg, #4e341d, #384e1d 50%,#1e3504);
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 30px;
+  cursor: pointer;
+  margin: 20px;
+}
+
+@media (min-width: 768px) {
+    .btn {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}
+
+h1 {
+    border: 5px solid;
+    padding: 50px;
+    text-align: center;
+    background-image: url("https://img.freepik.com/premium-photo/blank-medieval-scroll-ancient-artifact-isolated-background_1304147-27144.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    font-family: "Modern Antiqua";
+    font-size: 60px;
+    font-weight: 400;
+    font-weight: bold;
+}
+
+#plot {
+    font-family: "Modern Antiqua";
+    font-size: 30px;
+    text-align: center;
+    align-items: center;
+    margin-inline: 100px;
+    font-weight: 400;
+    background-color: lightyellow;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+body{
+    background-image: url("https://images7.alphacoders.com/135/1351303.png");
 }
