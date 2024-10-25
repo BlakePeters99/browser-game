@@ -23,7 +23,6 @@ let texts = [
 ]
 
 /*----------------------------- Event Listeners -----------------------------*/
-
 buttonsElement.addEventListener('click', (event) => {
     // Grabs choice and stores it in decision
     decision = choiceHandler(event);
@@ -117,8 +116,6 @@ function reactionHandler() {
             break;
     }
 }
-
-
 
 /*-------------------------------- Notes --------------------------------*/
 // restart button
