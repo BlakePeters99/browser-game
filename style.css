@@ -5,7 +5,7 @@
 }
 
 .btn {
-    align-items: center;
+    justify-items: center;
     background-image: linear-gradient(144deg, #4e341d, #384e1d 50%, #1e3504);
     border-radius: 8px;
     box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
@@ -52,7 +52,7 @@ h1 {
     font-size: 30px;
     text-align: center;
     align-items: center;
-    margin-inline: 100px;
+    margin: 0 100px 15px 100px;
     font-weight: 400;
     background-color: lightyellow;
     padding: 10px;
@@ -62,9 +62,11 @@ h1 {
 
 #HUD {
     background-color: lightyellow;
-    margin-inline: 1200px;
-    border-radius: 50px;
-    margin-top: 30px;
+    justify-self: center;
+    width: 300px;
+    padding-bottom: 5px;
+    border-radius: 30px;
+    margin-top: 20px;
     border: 2px solid black;
 }
 
