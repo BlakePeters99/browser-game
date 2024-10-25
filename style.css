@@ -1,28 +1,35 @@
 /* CSS */
-#buttons-box{
+#buttons-box {
     display: flex;
     justify-content: center;
 }
+
 .btn {
-  align-items: center;
-  background-image: linear-gradient(144deg, #4e341d, #384e1d 50%,#1e3504);
-  border-radius: 8px;
-  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  line-height: 1em;
-  max-width: 100%;
-  min-width: 140px;
-  padding: 30px;
-  cursor: pointer;
-  margin: 20px;
+    align-items: center;
+    background-image: linear-gradient(144deg, #4e341d, #384e1d 50%, #1e3504);
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 30px;
+    cursor: pointer;
+    margin: 20px;
+    transition-duration: 0.4s;
+}
+
+.btn:hover {
+    color: black;
+    border: 2px solid #04AA6D;
 }
 
 @media (min-width: 768px) {
     .btn {
-    font-size: 24px;
-    min-width: 196px;
-  }
+        font-size: 24px;
+        min-width: 196px;
+    }
 }
 
 h1 {
@@ -39,7 +46,8 @@ h1 {
     font-weight: bold;
 }
 
-#plot, #reaction {
+#plot,
+#reaction {
     font-family: "Modern Antiqua";
     font-size: 30px;
     text-align: center;
@@ -49,11 +57,29 @@ h1 {
     background-color: lightyellow;
     padding: 10px;
     border-radius: 20px;
-}
-#HUD  {
-    background-color: lightyellow;
+    border: 2px solid black;
 }
 
-body{
+#HUD {
+    background-color: lightyellow;
+    margin-inline: 1200px;
+    border-radius: 50px;
+    margin-top: 30px;
+    border: 2px solid black;
+}
+
+body {
     background-image: url("https://images7.alphacoders.com/135/1351303.png");
+}
+
+h2 {
+    text-align: center;
+    font-family: "Modern Antiqua";
+}
+
+.info {
+    font-family: "Modern Antiqua";
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 10px;
 }
