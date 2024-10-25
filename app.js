@@ -95,34 +95,36 @@ const tmGame = () => {
 	buttonsElement.addEventListener("click", (event) => {
 		// Grabs choice and stores it in decision
 		decision = choiceHandler(event);
-		// Grabs correct response from text array
-		reactionElement.innerText =
-			"Consequence of previous choice: " +
-			texts[eventNumber][decision + 3];
+		if (decision !== null) {
+			// Grabs correct response from text array
+			reactionElement.innerText =
+				"Consequence of previous choice: " +
+				texts[eventNumber][decision + 3];
 
-		// Handles effects of user's choices
-		reactionHandler();
+			// Handles effects of user's choices
+			reactionHandler();
 
-		// Transition to next event
-		if (
-			texts[eventNumber][decision + 6] !== "death" &&
-			texts[eventNumber][decision + 6] !== "victory" &&
-			eventNumber < texts.length - 2
-		) {
-			nextScene();
-		}
-		// Final boss code to show only the options the user has enough loot for
-		else if (
-			texts[eventNumber][decision + 6] !== "death" &&
-			texts[eventNumber][decision + 6] !== "victory" &&
-			eventNumber >= texts.length - 2
-		) {
-			nextScene();
-			if (loot < 2) {
-				button2Element.remove();
-				button3Element.remove();
-			} else if (loot < 4) {
-				button3Element.remove();
+			// Transition to next event
+			if (
+				texts[eventNumber][decision + 6] !== "death" &&
+				texts[eventNumber][decision + 6] !== "victory" &&
+				eventNumber < texts.length - 2
+			) {
+				nextScene();
+			}
+			// Final boss code to show only the options the user has enough loot for
+			else if (
+				texts[eventNumber][decision + 6] !== "death" &&
+				texts[eventNumber][decision + 6] !== "victory" &&
+				eventNumber >= texts.length - 2
+			) {
+				nextScene();
+				if (loot < 2) {
+					button2Element.remove();
+					button3Element.remove();
+				} else if (loot < 4) {
+					button3Element.remove();
+				}
 			}
 		}
 	});
@@ -142,8 +144,11 @@ const tmGame = () => {
 			return 1;
 		} else if (event.target.classList.contains("choice2")) {
 			return 2;
-		} else {
+		} else if (event.target.classList.contains("choice3")) {
 			return 3;
+		}
+		else {
+			return null;
 		}
 	}
 	// Takes the appropriate reaction and handles that function
